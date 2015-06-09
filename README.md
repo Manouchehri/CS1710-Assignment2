@@ -4,7 +4,7 @@
 
 Answer to "Part I: Algorithm" can be found in `PartI/Algorithm.md`.
 
-Answer to "Part II: Tracing" can be found in `PartII/Trace1.md` and `PartII/Trace2.md`.
+Answers to "Part II: Tracing" can be found in `PartII/Trace1.md` and `PartII/Trace2.md`.
 
 Answers to "Part III: Programming Exercises" can be found in `/PartIII/src/*.java`.
 
