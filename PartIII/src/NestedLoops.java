@@ -20,6 +20,17 @@
  */
 public class NestedLoops {
     public static void main(String[] args) {
+        int length = 11;
+        int width = length / 2 + 1;
 
+        for(int i = 0; i < length; i++) {
+            if(i < width)
+                for(int j = 0; j < i; j++)
+                    System.out.print("@");
+            else
+                for(int j = 0; j < (length - i - 1); j++)
+                    System.out.print("@");
+            System.out.print("@\n");
+        }
     }
 }
