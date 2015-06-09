@@ -1,0 +1,24 @@
+# vim swap files
+*.swp
+
+# Property of Memorial University, do not track.
+/1710_A2_S15_DISTANCE.pdf
+/PartI/Instructions.md
+/PartII/src/
+/PartIII/Instructions.md
+
+# Contains personal information, do not include.
+/STUDENT.txt
+
+# Don't really need to include the Intellij project files.
+.idea/
+*.iml
+
+# Ugh, binaries
+/out/
+*.class
+*.jar
+*.pdf
+
+# Needs to be in a .zip to submit. Check README.md for instructions on how to make one.
+*.zip
