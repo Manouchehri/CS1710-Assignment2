@@ -28,7 +28,7 @@ public class NestedLoops {
                 for(int j = 0; j < i; j++)
                     System.out.print("@");
             else
-                for(int j = 0; j < (length - i - 1); j++)
+                for(int j = 1; j < (length - i); j++)
                     System.out.print("@");
             System.out.print("@\n");
         }
