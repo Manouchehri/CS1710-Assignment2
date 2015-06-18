@@ -28,7 +28,7 @@ public class ExpectedSalary {
             String input = userInput.next();
             if(input.equalsIgnoreCase("done"))
                 break;
-            userInputs += input;
+            userInputs += input + "\n";
         }
 
         Scanner scanner = new Scanner(userInputs);
