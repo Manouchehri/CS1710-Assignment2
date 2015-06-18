@@ -14,6 +14,7 @@ Line Number | x | y | Loop Condition (T/F) | Output
 3           |   |   |                      | x = 4 y = 0
 2           |   | 1 |           T          |        
 3           |   |   |                      | x = 4 y = 1
+2           |   | 2 |           F          |        
 4           |   |   |                      | \n
 1           | 3 |   |           T          |        
 2           |   | 0 |           T          |        
