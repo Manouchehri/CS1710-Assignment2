@@ -28,8 +28,8 @@ public class NestedLoops {
                 for(int j = 0; j < i; j++)
                     System.out.print("@");
             else
-                for(int j = 1; j < (length - i); j++)
-                    System.out.print("@");
+                for(int j = 1; j < (length - i); j++) /* I'm aware this is a bit messy, but I like     */
+                    System.out.print("@");            /* being able to change the length/width easily. */
             System.out.print("@\n");
         }
     }

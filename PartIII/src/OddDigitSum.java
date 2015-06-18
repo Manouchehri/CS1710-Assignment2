@@ -19,7 +19,7 @@ public class OddDigitSum {
         int nums = userInput.nextInt();
 
         if(nums < 0)
-            System.out.println("Error, number cannot be negative");
+            System.out.println("Error, number cannot be negative.");
 
         /* If the input number is zero, no need to do any math. */
 

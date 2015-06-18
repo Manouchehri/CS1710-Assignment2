@@ -22,9 +22,11 @@ public class ExpectedSalary {
 
         final String degrees[] = {"BSC", "MSC", "PHD"};
 
+        System.out.println("Please enter all applicants followed by `done`: ");
+
         /* Collect all the user input. */
         String userInputs = "";
-        for(; userInput.hasNext();) {
+        while(userInput.hasNext()) {
             String input = userInput.next();
             if(input.equalsIgnoreCase("done")) {
                 userInputs += "\n";
@@ -32,25 +34,33 @@ public class ExpectedSalary {
             }
             userInputs += input + "\n";
         }
-        userInput.close();
+        userInput.close(); /* Might as well close it if I'm not using it. */
+
+        /* The assignment document doesn't really make clear
+           how reliable the input is going to be, so I've
+           tried to make it a bit fault tolerant. */
 
         String ID = "";
         int degree = 0, salary = 0;
 
         Scanner liner = new Scanner(userInputs);
         for (int i = 0; liner.hasNextLine(); i++) {
-            String line = liner.nextLine().toUpperCase();
+            String line = liner.nextLine().toUpperCase(); /* Might as well throw everything into upper case. */
 
-            if(i > 2) { /* If three lines have been read. */
+            if(i > 2) { /* If three lines have been read, assume it's onto the next applicant. */
                 i = 0;
                 System.out.printf("ID: %s + Expected Salary: $%.2f\n", ID, (double)salary);
+                /* I could also just fake it and write .00 instead of casting it, but
+                   supporting decimals isn't going to hurt. */
             }
 
             if(i == 0)
-                ID = line;
+                ID = line; /* I have no way of knowing what's considered a valid ID,
+                              so I have to accept everything. */
             else if(i == 1) {
-                if(line.equalsIgnoreCase(degrees[0]))
-                    degree = 0;
+                if(line.equalsIgnoreCase(degrees[0])) /* I shouldn't have to ignore the case since everything */
+                    degree = 0;                       /* is already upper case, but it's just a safe way of   */
+                                                      /* double checking things.                              */
                 else if(line.equalsIgnoreCase(degrees[1]))
                     degree = 1;
                 else if(line.equalsIgnoreCase(degrees[2]))
@@ -73,7 +83,7 @@ public class ExpectedSalary {
                             salary = basePhD;
                     }
                 else
-                    switch(degree) {
+                    switch(degree) {  /* Another way of doing this would be add the difference. */
                         case 0:
                             salary = expBSc;
                             break;
@@ -84,6 +94,6 @@ public class ExpectedSalary {
                             salary = expPhD;
                     }
         }
-        liner.close();
+        liner.close(); /* If I was going to modify the string again, it would need to be closed. */
     }
 }
